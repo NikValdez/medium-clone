@@ -13,8 +13,7 @@ RSpec.describe "Creating post" do
     click_on "Publish"
 
     within(".posts") do
-      expect(page).to have_content "My first post"
-      expect(page).to have_content user.username
+      expect(page).to have_content :user
     end
   end
     scenario "unsuccessfully creates post" do
